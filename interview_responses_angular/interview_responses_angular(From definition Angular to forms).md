@@ -250,8 +250,6 @@ Il decoratore `@Injectable()` fornisce metadati che permettono ad Angular di sap
 ### 📌 **Conclusione**
 
 Sebbene `@Injectable()` sia comunemente utilizzato nei servizi, può essere applicato a qualsiasi classe che necessita di avere le proprie dipendenze iniettate da Angular. La sua applicazione non è limitata ai servizi, ma è uno strumento fondamentale per abilitare la Dependency Injection in Angular.
----
-Certo! Ecco una **versione migliorata, fluida e adatta a un profilo junior** per rispondere alla domanda: **"Come viene gestito il data binding in Angular?"**. L’obiettivo è trasmettere **chiarezza**, usare i **termini giusti senza complicare troppo**, ed essere pronto anche a **eventuali domande di approfondimento**.
 
 ---
 
@@ -362,9 +360,6 @@ Qui non lo "stampi" direttamente nel DOM, ma assegni il numero alla proprietà `
 * **Per passare dati a proprietà di elementi HTML** → usa `[property]="valore"`
 .
 ---
-Certo! Ecco una **risposta migliorata, chiara, completa ma adatta a un colloquio da front-end junior** alla domanda:
-
----
 
 ### ❓ **Come si gestiscono i form in Angular?**
 
@@ -424,8 +419,6 @@ form = new FormGroup({
 | Testabilità     | Più difficile   | Più facile                   |
 | Uso consigliato | Form semplici   | Form complessi/dinamici      |
 .
----
-Certo! Ecco una spiegazione completa ma adatta a un **profilo front-end junior**, che include cosa sono i **validatori**, come crearli **custom**, e come si usano nei due approcci di Angular: **template-driven forms** e **reactive forms**.
 
 ---
 
