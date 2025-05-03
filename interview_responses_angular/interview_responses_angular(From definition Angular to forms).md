@@ -7,11 +7,6 @@
 Angular è un framework front-end open-source, sviluppato da Google, che permette di costruire applicazioni web moderne e scalabili, in particolare Single Page Applications (SPA). È basato su un'architettura a componenti, dove ogni parte dell'interfaccia utente è rappresentata da un componente. Utilizza TypeScript, che è un superset di JavaScript, per offrire tipizzazione statica, il che aiuta a prevenire errori a tempo di compilazione e migliora la manutenzione del codice. Angular include anche un sistema di routing per la navigazione, un modulo di gestione dello stato tramite servizi, e un potente sistema di dependency injection. Inoltre, sfrutta tecniche avanzate come il two-way data binding, che sincronizza automaticamente il modello con la vista, e il change detection, per ottimizzare le performance.
 ---
 
-Hai perfettamente ragione: quella risposta è **più chiara, fluida e adatta a un colloquio junior**, anche se manca il dettaglio che un componente è **una direttiva speciale con template**.
-
-Per completarla, senza appesantire troppo il discorso, potresti aggiungere una sola frase al punto giusto. Ecco la versione **completa e migliorata**, da usare al colloquio:
----
-
 ### ❓ **Che cos’è un componente in Angular?**
 
 **Risposta:**
