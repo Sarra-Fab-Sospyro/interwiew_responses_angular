@@ -640,6 +640,109 @@ form = new FormGroup({
 | Dinamicità      | Limitata        | Avanzata (con `FormArray`)   |
 | Testabilità     | Più difficile   | Più facile                   |
 | Uso consigliato | Form semplici   | Form complessi/dinamici      |
+.
+---
+
+## 🧩 **Elementi base dei Reactive Forms**
+
+### 🔹 `FormControl`
+
+Un **singolo campo di input** (come un `<input>`, `<select>`, ecc.).
+
+#### ✅ Cosa fa:
+
+* Tiene traccia del **valore** e dello **stato di validazione** del campo.
+* Si può collegare direttamente a un input.
+
+#### 🧪 Esempio:
+
+```ts
+nameControl = new FormControl('', Validators.required);
+```
+
+```html
+<input [formControl]="nameControl" placeholder="Nome" />
+```
+.
+---
+
+### 🔹 `FormGroup`
+
+Un **gruppo di `FormControl`** (o anche altri `FormGroup`) che rappresenta un'intera **sezione del form**.
+
+#### ✅ Cosa fa:
+
+* Organizza i campi per nome (come un oggetto).
+* Può avere **validazioni a livello di gruppo**.
+
+#### 🧪 Esempio:
+
+```ts
+form = new FormGroup({
+  name: new FormControl('', Validators.required),
+  email: new FormControl('', [Validators.required, Validators.email])
+});
+```
+
+```html
+<form [formGroup]="form">
+  <input formControlName="name" placeholder="Nome" />
+  <input formControlName="email" placeholder="Email" />
+</form>
+```
+.
+---
+
+### 🔹 `FormArray`
+
+Una **lista dinamica di controlli**, utile quando vuoi aggiungere o rimuovere **più elementi dello stesso tipo** (come una lista di hobby, email, o figli).
+
+#### ✅ Cosa fa:
+
+* Può contenere `FormControl`, `FormGroup` o anche altri `FormArray`.
+* Ideale per **campi ripetuti o dinamici**.
+
+#### 🧪 Esempio:
+
+```ts
+form = new FormGroup({
+  hobbies: new FormArray([
+    new FormControl('Lettura'),
+    new FormControl('Musica')
+  ])
+});
+
+get hobbies() {
+  return this.form.get('hobbies') as FormArray;
+}
+
+addHobby() {
+  this.hobbies.push(new FormControl(''));
+}
+```
+
+```html
+<div formArrayName="hobbies">
+  <div *ngFor="let hobby of hobbies.controls; let i = index">
+    <input [formControlName]="i" placeholder="Hobby" />
+  </div>
+  <button (click)="addHobby()">Aggiungi Hobby</button>
+</div>
+```
+.
+---
+
+## 🧠 Riepilogo veloce
+
+| Classe        | Descrizione                                   | Esempio d’uso                              |
+| ------------- | --------------------------------------------- | ------------------------------------------ |
+| `FormControl` | Un singolo campo (es. nome, email)            | `new FormControl('', Validators.required)` |
+| `FormGroup`   | Gruppo di controlli organizzati per chiave    | `new FormGroup({ name: ..., email: ... })` |
+| `FormArray`   | Lista dinamica di controlli dello stesso tipo | `new FormArray([ new FormControl('') ])`   |
+.
+---
+
+
 
 ## Cosa sono i Validator in Angular?
 
