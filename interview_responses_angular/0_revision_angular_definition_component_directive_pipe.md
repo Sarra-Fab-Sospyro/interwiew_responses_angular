@@ -9,7 +9,7 @@ Angular è un framework front-end open-source sviluppato da Google per costruire
 - **Architettura a componenti**: ogni parte dell'interfaccia utente è un componente riutilizzabile
 - **TypeScript**: usa questo superset di JavaScript per offrire tipizzazione statica, riducendo gli errori durante lo sviluppo
 - **Routing**: sistema integrato per la navigazione tra le diverse viste dell'applicazione
-- **Gestione dello stato**: tramite servizi e dependency injection
+- **Dependency Injection**: fornitura di oggetti tramite servizi e altri provider
 - **Data binding**: bidirezionale (two-way) per sincronizzare automaticamente modello e vista
 - **Change detection**: meccanismo efficiente per aggiornare il DOM solo quando necessario
 - **Tooling completo**: CLI, testing framework e strumenti di sviluppo integrati
